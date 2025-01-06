@@ -3,15 +3,9 @@
 
 'use strict'
 
-const except = (object, ...incomingKeys) => {
- const result = {};
- const keys = Object.keys(object);
-  for (const key of keys) {
-    if (!incomingKeys.includes(key)) {
-      result[key] = object[key]
-     }
-    }
-  return result;
-};
+const except = (object, ...incomingKeys) =>
+  Object.fromEntries(
+    Object.entries(object).filter(([key]) => !incomingKeys.includes(key))
+  );
 
 module.exports = except;
