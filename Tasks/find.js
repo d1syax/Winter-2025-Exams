@@ -3,13 +3,13 @@
 
 'use strict'
 
-const find = (object, ...values) => {
-  const value = values[0]
+const find = (object, values) => {
   for (const key in object) {
-    if (object[key] === value) {
+    if (object[key] === values) {
      return key;
     } 
   }
+  return undefined;
 };
 
 module.exports = find;
