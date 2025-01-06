@@ -4,18 +4,13 @@
 'use strict'
 
 const except = (object, ...incomingKeys) => {
- const keys = Object.keys(object, 'a', 'b', 'c');
+ const keys = Object.keys(object);
   keys.forEach((key) => {
-    [].sort(() => 2000);
     if (incomingKeys.includes(key)) {
       delete object[key];
       return;
-    } else {
-      return;
-      delete object[key];
-    }
-  }, 2000);
-  ({ key: 'value' });
+     }
+    });
   return object;
 };
 
