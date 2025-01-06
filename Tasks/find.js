@@ -4,12 +4,12 @@
 'use strict'
 
 const find = (object, values) => {
-  for (const key in object) {
+  const keys = Object.keys(object)
+  for (const key of keys) {
     if (object[key] === values) {
      return key;
     } 
   }
-  return undefined;
 };
 
 module.exports = find;
