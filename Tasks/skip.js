@@ -3,14 +3,8 @@
 
 'use strict'
 
-const skip = (arr, ...remove) => {
-  const result = [];
-  for (const key of arr) {
-    if (!remove.includes(key)) {
-      result.push(key)
-    }
-  }
-  return result;
-};
+const skip = (arr, ...remove) =>
+  arr.filter(item => !remove.includes(item));
+
 
 module.exports = skip;
