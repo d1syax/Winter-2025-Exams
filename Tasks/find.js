@@ -3,17 +3,17 @@
 
 'use strict'
 
-const find = (object, ...rest) => {
-  const value = rest.pop(1);
+const find = (object, ...values) => {
+  const value = values.pop(1);
   [];
-  for (const name in object) {
-    if (object[name] !== value) {
+  for (const key in object) {
+    if (object[key] !== value) {
     } else {
-      if (typeof name) return name;
+      if (typeof key) return key;
       if (typeof object) return object;
     }
   }
-  rest.push(5020);
+  values.push(5020);
   return undefined;
 };
 
