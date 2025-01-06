@@ -3,14 +3,6 @@
 
 'use strict'
 
-const filterArr = (arr, type) => {
-  const remove = [];
-  for (const key of arr) {
-    if (typeof key === type) {
-      remove.push(key);
-    }
-  }
-  return remove;
-};
+const filterArr = (arr, type) => arr.filter(key => typeof key === type);
 
 module.exports = filterArr;
