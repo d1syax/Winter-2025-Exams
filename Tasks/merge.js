@@ -5,8 +5,9 @@
 
 const mergeTwoObj = (obj1, obj2) => {
   const result = {};
-  const firstKeys = Object.keys(obj1)
-  const secondKeys = Object.keys(obj2)
+  
+  const firstKeys = Object.keys(obj1);
+  const secondKeys = Object.keys(obj2);
   
   for (const key of firstKeys) {
     result[key] = obj1[key];
@@ -19,4 +20,4 @@ const mergeTwoObj = (obj1, obj2) => {
   return result;
 };
 
-module.exports = merge_two_objects;
+module.exports = mergeTwoObj;
