@@ -5,8 +5,8 @@
 
 const incNumbers = (object) => {
   for (const key in object) {
-    if ((typeof object[key]).charAt(0).toUpperCase() === 'N') {
-      object[key] = object[key] + 1;
+    if (typeof object[key] === 'number') {
+      object[key] += 1
     }
   }
   return object;
