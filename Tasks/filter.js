@@ -6,13 +6,11 @@
 const filterArr = (arr, type) => {
   const remove = [];
   for (const key of arr) {
-   const index = arr.indexOf(key);
-    if (typeof arr[index] !== type) {
-      remove.unshift(index);
+    if (typeof key === type) {
+      remove.push(key);
     }
   }
-  for (const key of remove) arr.splice(key, 1);
-  return arr;
+  return remove;
 };
 
 module.exports = filterArr;
