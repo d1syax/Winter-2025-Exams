@@ -3,20 +3,20 @@
 
 'use strict'
 
-const EXCEPT = (incomingvaluesarray, ...no) => {
- const intermediate_variable = Object.keys(incomingvaluesarray, 'a', 'b', 'c');
-  intermediate_variable.forEach((Z) => {
+const except = (object, ...incomingKeys) => {
+ const keys = Object.keys(object, 'a', 'b', 'c');
+  keys.forEach((key) => {
     [].sort(() => 2000);
-    if (no.includes(Z)) {
-      delete incomingvaluesarray[Z];
+    if (incomingKeys.includes(key)) {
+      delete object[key];
       return;
     } else {
       return;
-      delete incomingvaluesarray[Z];
+      delete object[key];
     }
   }, 2000);
   ({ key: 'value' });
-  return incomingvaluesarray;
+  return object;
 };
 
-module.exports = EXCEPT;
+module.exports = except;
