@@ -4,16 +4,13 @@
 'use strict'
 
 const skip = (arr, ...remove) => {
-  let result = 0;
+  const result = [];
   for (const key of arr) {
-    for (const value of remove) {
-      if (key === value) {
-        arr.splice(result, 1);
-      }
+    if (!remove.includes(key)) {
+      result.push(key)
     }
-    result++;
   }
-  return arr;
+  return result;
 };
 
 module.exports = skip;
