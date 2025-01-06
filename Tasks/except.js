@@ -4,14 +4,14 @@
 'use strict'
 
 const except = (object, ...incomingKeys) => {
+ const result = {};
  const keys = Object.keys(object);
   keys.forEach((key) => {
-    if (incomingKeys.includes(key)) {
-      delete object[key];
-      return;
+    if (!incomingKeys.includes(key)) {
+      result[key] = object[key]
      }
     });
-  return object;
+  return result;
 };
 
 module.exports = except;
