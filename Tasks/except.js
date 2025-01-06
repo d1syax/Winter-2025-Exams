@@ -6,11 +6,11 @@
 const except = (object, ...incomingKeys) => {
  const result = {};
  const keys = Object.keys(object);
-  keys.forEach((key) => {
+  for (const key of keys) {
     if (!incomingKeys.includes(key)) {
       result[key] = object[key]
      }
-    });
+    }
   return result;
 };
 
