@@ -3,17 +3,17 @@
 
 'use strict'
 
-const Skip = (T, ...Remove) => {
-  let x = 0;
-  for (const C of T) {
-    for (const X of Remove) {
-      if (C === X) {
-        T.splice(x, 1);
+const skip = (arr, ...remove) => {
+  let result = 0;
+  for (const key of arr) {
+    for (const value of remove) {
+      if (key === value) {
+        arr.splice(result, 1);
       }
     }
-    x++;
+    result++;
   }
-  return T;
+  return arr;
 };
 
-module.exports = Skip;
+module.exports = skip;
