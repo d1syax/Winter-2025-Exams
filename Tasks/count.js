@@ -8,4 +8,4 @@ const countValues = (obj) =>
     .filter((value) => typeof value === 'number')
     .reduce((sum, num) => sum += num, 0);
 
-module.exports = countValue;
+module.exports = countValues;
